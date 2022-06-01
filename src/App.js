@@ -145,7 +145,7 @@ class App extends Component {
     return (
     <div>
       <h1>Lista de Prestamos</h1>
-      <table border="1">
+      <table border="1" class="table table-striped">
         <thead>
           <tr>
             <th>Id Prestamo</th>
@@ -165,8 +165,8 @@ class App extends Component {
                 <td>{prestamo.fecPrestamo}</td>
                 <td>{prestamo.fecDevolucion}</td>
                 <td>
-                  <button onClick={()=>this.mostrar(prestamo.id,index)}>Editar</button>
-                  <button onClick={()=>this.eliminar(prestamo.id)}>Eliminar</button>
+                  <button class="btn btn-success" onClick={()=>this.mostrar(prestamo.id,index)}>Editar</button>
+                  <button class="btn btn-danger" onClick={()=>this.eliminar(prestamo.id)}>Eliminar</button>
                 </td>
               </tr>
             );
